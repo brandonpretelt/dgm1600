@@ -1,5 +1,8 @@
+/*** Housekeeping Stuff ***/
+
 :root {
-    --blue-bg: hsl(217, 58%, 12%);
+    --blue-bg-300: hsl(218, 56%, 23%);
+    --blue-bg-400: hsl(217, 58%, 12%);
     --blue-hdg: hsl(193, 100%, 87%);
     --grey-bg: hsl(0, 0%, 41%);
 }
@@ -15,9 +18,19 @@
 }
 
 body {
-    background-color: var(--blue-bg);
+    background-color: var(--blue-bg-300);
     color: hsl(0 0% 100% / 0.938);
     margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
 }
 
 .container {
@@ -27,33 +40,14 @@ body {
     margin: 0 auto;
 }
 
-img {
-    max-width: 100%;
+main {
+    display: flex;
+    flex-direction: column;
 }
 
-#logo,
-#pfp {
-    border-top-right-radius: 4vw;
-    border-bottom-left-radius: 4vw;
-    border-top-left-radius: 1vw;
-    border-bottom-right-radius: 1vw;
-}
+/*** END Housekeeping Stuff ***/
 
-/* #logo,
-#pfp {
-    border-radius: 50%;
-} */
-
-#logo {
-    width: 130px;
-}
-
-h1,
-h2,
-h3 {
-    font-weight: 400;
-}
-
+/*** Header Stuff ***/
 header {
     display: flex;
     justify-content: center;
@@ -77,14 +71,14 @@ header img,
 
 }
 
-.pfp-container {
-    margin-top: 2em;
+#logo {
+    border-radius: 50%;
+    width: 130px;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-}
+/*** End Header Stuff ***/
+
+/*** Profile Stuff ***/
 
 section {
     margin-bottom: 2em;
@@ -94,14 +88,20 @@ section {
     display: block;
 }
 
+.pfp-container {
+    margin-top: 2em;
+}
+
+#pfp {
+    border-top-right-radius: 4vw;
+    border-bottom-left-radius: 4vw;
+    border-top-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+}
+
 .pfp-container img {
     margin: 0 auto;
     width: 200px;
-}
-
-.intro-stuff {
-    text-align: center;
-    padding: 0.5em;
 }
 
 .intro h2 {
@@ -117,14 +117,16 @@ section {
     white-space: nowrap;
 }
 
-.pfp-container img {
-    width: 200px;
+.intro-stuff {
+    text-align: center;
+    padding: 0.5em;
 }
 
 .box-card {
     background-color: var(--grey-bg);
     padding: 1em;
     margin: 0.5em;
+    border-radius: 0.5em;
 }
 
 .box-card h3 {
@@ -135,6 +137,10 @@ section {
 .box-card ul {
     margin-left: 1em;
 }
+
+/*** End Profile Stuff ***/
+
+/*** Tech Block Stuff ***/
 
 #tech-block {
     display: grid;
@@ -161,17 +167,9 @@ section {
     width: auto;
 }
 
-.pfp-container img::before {
-    content: '';
-    display: table;
-    clear: both;
-}
+/*** End Tech Block Stuff ***/
 
-.pfp-container img::after {
-    content: '';
-    display: table;
-    clear: both;
-}
+/*** Learn Block Stuff ***/
 
 #learn-block h2 {
     color: var(--blue-hdg);
@@ -182,6 +180,8 @@ section {
 #learn-block p:nth-of-type(1) {
     margin-bottom: 2em;
 }
+
+/*** End Learn Block Stuff ***/
 
 footer {
     display: flex;
@@ -224,20 +224,12 @@ footer {
     .tech-pfp {
         display: flex;
         flex-flow: column;
-        margin: auto;
         max-width: 220px;
     }
-
 
     .tech-pfp figcaption {
         width: 17.5vw;
         padding: 0.25em;
-    }
-
-    #tech-block {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
     }
 
     #tech-block .tech-pfp {
