@@ -3,7 +3,11 @@
 :root {
     --blue-bg-300: hsl(218, 56%, 23%);
     --blue-bg-400: hsl(217, 58%, 12%);
+    --coolblue-bg-300: hsl(210, 36%, 89%);
+    --coolblue-bg-400: hsl(210, 36%, 69%);
     --blue-hdg: hsl(193, 100%, 87%);
+    --blue-hdg-400: hsl(208, 68%, 25%);
+    --blue-hdg-500: hsl(208, 68%, 15%);
     --grey-bg: hsl(0, 0%, 41%);
 }
 
@@ -18,7 +22,7 @@
 }
 
 body {
-    background-color: var(--blue-bg-300);
+    background-color: var(--coolblue-bg-400);
     color: hsl(0 0% 100% / 0.938);
     margin: 0 auto;
 }
@@ -59,6 +63,7 @@ header {
 header h1 {
     font-size: 2rem;
     margin-left: 0.5em;
+    color: var(--blue-hdg-400);
 }
 
 header img {
@@ -105,16 +110,13 @@ section {
 }
 
 .intro h2 {
-    color: var(--blue-hdg);
+    white-space: nowrap;
 }
 
 .intro h2,
 .intro time {
     font-size: 1.5rem;
-}
-
-.intro h2 {
-    white-space: nowrap;
+    color: var(--blue-hdg-400);
 }
 
 .intro-stuff {
@@ -172,7 +174,7 @@ section {
 /*** Learn Block Stuff ***/
 
 #learn-block h2 {
-    color: var(--blue-hdg);
+    color: var(--blue-hdg-400);
     font-size: 1.5rem;
     font-weight: bold;
 }
