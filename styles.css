@@ -22,7 +22,8 @@
 }
 
 body {
-    background-color: var(--coolblue-bg-400);
+    /*background-color: var(--coolblue-bg-400);*/
+    background-color: var(--blue-bg-400);
     color: hsl(0 0% 100% / 0.938);
     margin: 0 auto;
 }
